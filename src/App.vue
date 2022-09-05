@@ -1,13 +1,15 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/connexion">Connexion</router-link> |
+    <router-link to="/accueil">Accueil</router-link>
   </nav>
   <router-view/>
 </template>
 
 <style lang="scss">
 #app {
+  background-color: #f5f5f5;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,6 +18,7 @@
 }
 
 nav {
+  background-color: #fff;
   padding: 30px;
 
   a {

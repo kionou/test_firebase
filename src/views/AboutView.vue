@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <ComponentLogin/>
 </template>
+
+<script>
+  import ComponentLogin from '@/components/ComponentLogin.vue';
+export default {
+  name:"AboutView",
+  components:{
+    ComponentLogin
+  }
+
+}
+</script>
+
+<style>
+
+</style>
