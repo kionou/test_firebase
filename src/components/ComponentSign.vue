@@ -39,8 +39,8 @@
 </template>
 
 <script>
-    import {data} from '../firebase'
-    import { getFirestore, collection, addDoc } from 'firebase/firestore'
+    import {usersCollection} from '../firebase'
+    import {  addDoc } from 'firebase/firestore'
 export default {
     name:"ComponentLogin",
     data() {
@@ -61,12 +61,8 @@ export default {
                 numero:this.numero,
                 password:this.password
             }
-            console.log("sqqf",data);
-
-
-            const citiesCol = collection(data, 'users');
-           const citySnapshot = await addDoc(citiesCol,DataUser);
-        //    const cityList = citySnapshot.docs.map(doc => doc.data());
+           const citySnapshot = await addDoc(usersCollection,DataUser);
+          const cityList = citySnapshot.docs.map(doc => doc.data());
           console.log(citySnapshot);
 
         }
